@@ -1,12 +1,17 @@
 #This code is from "experimental-branch"
+#Calculate Fibonacci sequence:
 
-#include <iostream>
 
-using namespace std;
+def fibonacci(n):
+    fib_sequence = [0, 1]
+    while len(fib_sequence) < n:
+        next_num = fib_sequence[-1] + fib_sequence[-2]
+        fib_sequence.append(next_num)
+    return fib_sequence
 
-unsigned int factorial(unsigned int n)
-{
-	if (n == 0 || n == 1)
-	return 1;
-	return n * factorial(n - 1);
-}
+
+n = 10
+fib_numbers = fibonacci(n)
+
+
+print(f"The first {n} Fibonacci numbers are: {fib_numbers}")
